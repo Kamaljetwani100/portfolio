@@ -167,6 +167,7 @@ h1,h2,h3,h4 {
 .btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.45rem;
   padding: 0.65rem 1.5rem;
   border-radius: var(--radius-sm);
@@ -178,40 +179,31 @@ h1,h2,h3,h4 {
   white-space: nowrap;
 }
 
-.btn--primary {
-  background: var(--accent);
-  color: #0a0c10;
-  font-weight: 600;
-}
+/* SAME STYLE FOR ALL BUTTONS */
 
-.btn--primary:hover {
-  background: #00f5cf;
-  box-shadow: 0 0 24px var(--accent-glow);
-  transform: translateY(-2px);
-}
-
-.btn--outline {
+.btn--primary,
+.btn--outline,
+.btn--ghost {
+  background: transparent;
   border: 1.5px solid var(--accent);
   color: var(--accent);
 }
 
-.btn--outline:hover {
-  background: var(--accent-muted);
-  transform: translateY(-2px);
-}
+/* SAME HOVER EFFECT */
 
-.btn--ghost {
-  border: 1.5px solid var(--border);
-  color: var(--text-muted);
-}
-
+.btn--primary:hover,
+.btn--outline:hover,
 .btn--ghost:hover {
-  border-color: var(--accent);
-  color: var(--accent);
-  background: var(--accent-muted);
+  background: var(--accent);
+  color: #0a0c10;
+  transform: translateY(-2px);
+  box-shadow: 0 0 24px var(--accent-glow);
 }
 
-.btn--full { width: 100%; justify-content: center; }
+.btn--full {
+  width: 100%;
+  justify-content: center;
+}
 
 /* ── Tags / Pills ─────────────────────────────────────────── */
 .tag {
